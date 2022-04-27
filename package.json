@@ -1,0 +1,25 @@
+{
+  "name": "tdmonitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferfox1981/tdmonitor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferfox1981/tdmonitor/issues"
+  },
+  "homepage": "https://github.com/ferfox1981/tdmonitor#readme",
+  "dependencies": {
+    "axios": "^0.27.1",
+    "dotenv": "^16.0.0",
+    "twit": "^2.2.11"
+  }
+}
