@@ -15,10 +15,13 @@ async function acaoDoNossoBot() {
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
+
    let taxas = await taxa();
-   var postTweet = " 📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
-                   " 📉 IPCA+2045: "+ taxas.ipca2045;
-   
+
+   var postTweet = "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
+                   "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
+                   "📉 IPCA+2045: "+ taxas.ipca2045;
+                 //  replace(/,/g, '.')
    nossoBot.post(
       'statuses/update',
       {status: postTweet},
@@ -33,4 +36,4 @@ async function acaoDoNossoBot() {
 }
 acaoDoNossoBot();
 // 10 segundos
-setInterval(acaoDoNossoBot, 10000);
+//setInterval(acaoDoNossoBot, 10000);
