@@ -18,7 +18,9 @@ async function acaoDoNossoBot() {
 
    let taxas = await taxa();
 
-   var postTweet = "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
+   var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
+                   "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
+                   "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
                    "📉 IPCA+2045: "+ taxas.ipca2045;
                  //  replace(/,/g, '.')
