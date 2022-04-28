@@ -23,7 +23,7 @@ module.exports = async function getTaxas() {
         let restritoprefix2025 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB2U0')
         let restritoprefix2029 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN806')
         
-        
+         
 
         
         let taxa = 
