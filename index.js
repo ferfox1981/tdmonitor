@@ -38,4 +38,4 @@ async function acaoDoNossoBot() {
 }
 acaoDoNossoBot();
 // 10 segundos
-setInterval(acaoDoNossoBot, 10000);
+//setInterval(acaoDoNossoBot, 10000);
