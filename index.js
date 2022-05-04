@@ -2,11 +2,21 @@ var Twit = require("twit");
 const taxa = require('./monitor.js')
 
 require("dotenv").config();
+/*
 const nossoBot = new Twit({
    consumer_key: process.env.CONSUMER_KEY,
    consumer_secret: process.env.CONSUMER_SECRET,
    access_token: process.env.ACCESS_TOKEN,
    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
+   timeout_ms: 60 * 1000
+});
+*/
+
+const nossoBot = new Twit({
+   consumer_key: '527kTJH1fEmO7APnGv9p6XvQb',
+   consumer_secret: 'kRydFpUQ66IBO3LLmnnCxaDP3eEkvRiz2eWxCEYQJIxJcp5OTs',
+   access_token: '1511162557826052098-dXg413CYPf2kGWP7oJo9iyZLOVr4c1',
+   access_token_secret: '452WKET9XZQdouxgxjbjO92B8T8UjmeYxVXpof45aZaGB',
    timeout_ms: 60 * 1000
 });
 
