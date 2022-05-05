@@ -12,15 +12,7 @@ const nossoBot = new Twit({
    timeout_ms: 60 * 1000
 });
 
-/*
-const nossoBot = new Twit({
-   consumer_key: '527kTJH1fEmO7APnGv9p6XvQb',
-   consumer_secret: 'kRydFpUQ66IBO3LLmnnCxaDP3eEkvRiz2eWxCEYQJIxJcp5OTs',
-   access_token: '1511162557826052098-dXg413CYPf2kGWP7oJo9iyZLOVr4c1',
-   access_token_secret: '452WKET9XZQdouxgxjbjO92B8T8UjmeYxVXpof45aZaGB',
-   timeout_ms: 60 * 1000
-});
-*/
+
 async function acaoDoNossoBot() {
     //console.log( await taxa())
 // Cuidado ao postar tweets repetidos
@@ -33,7 +25,8 @@ async function acaoDoNossoBot() {
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
-                   "📉 IPCA+2045: "+ taxas.ipca2045;
+                   "📉 IPCA+2045: "+ taxas.ipca2045+"\n" +
+                   Math.random()
                  //  replace(/,/g, '.')
    nossoBot.post(
       'statuses/update',
