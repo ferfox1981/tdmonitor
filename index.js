@@ -11,7 +11,7 @@ const nossoBot = new Twit({
    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
    timeout_ms: 60 * 1000
 });
-var x = 99
+
 /*
 const nossoBot = new Twit({
    consumer_key: '527kTJH1fEmO7APnGv9p6XvQb',
@@ -33,7 +33,7 @@ async function acaoDoNossoBot() {
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
-                   "📉 IPCA+2045: "+ taxas.ipca2045+x++;
+                   "📉 IPCA+2045: "+ taxas.ipca2045;
                  //  replace(/,/g, '.')
    nossoBot.post(
       'statuses/update',
@@ -50,7 +50,7 @@ async function acaoDoNossoBot() {
 // ...
 
 // Schedule tasks to be run on the server.
-cron.schedule('* * * * *', function() {
+cron.schedule('0 10-17 * * 1-5', function() {
    acaoDoNossoBot();
  });
 
