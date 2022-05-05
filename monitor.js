@@ -20,7 +20,7 @@ module.exports = async function getTaxas() {
         let restrito2026 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB4W2')
         let restrito2035 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB3E2')
         let restrito2045 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB2U0')
-        let restritoprefix2025 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB2U0')
+        let restritoprefix2025 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN7N2')
         let restritoprefix2029 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN806')
         
          
