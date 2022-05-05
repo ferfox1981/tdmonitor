@@ -11,7 +11,7 @@ const nossoBot = new Twit({
    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
    timeout_ms: 60 * 1000
 });
-var x = 1
+var x = 99
 /*
 const nossoBot = new Twit({
    consumer_key: '527kTJH1fEmO7APnGv9p6XvQb',
