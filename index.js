@@ -2,7 +2,7 @@ var Twit = require("twit");
 const taxa = require('./monitor.js')
 
 require("dotenv").config();
-/*
+
 const nossoBot = new Twit({
    consumer_key: process.env.CONSUMER_KEY,
    consumer_secret: process.env.CONSUMER_SECRET,
@@ -10,8 +10,8 @@ const nossoBot = new Twit({
    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
    timeout_ms: 60 * 1000
 });
-*/
 
+/*
 const nossoBot = new Twit({
    consumer_key: '527kTJH1fEmO7APnGv9p6XvQb',
    consumer_secret: 'kRydFpUQ66IBO3LLmnnCxaDP3eEkvRiz2eWxCEYQJIxJcp5OTs',
@@ -19,7 +19,7 @@ const nossoBot = new Twit({
    access_token_secret: '452WKET9XZQdouxgxjbjO92B8T8UjmeYxVXpof45aZaGB',
    timeout_ms: 60 * 1000
 });
-
+*/
 async function acaoDoNossoBot() {
     //console.log( await taxa())
 // Cuidado ao postar tweets repetidos
@@ -48,4 +48,4 @@ async function acaoDoNossoBot() {
 }
 acaoDoNossoBot();
 // 10 segundos
-//setInterval(acaoDoNossoBot, 10000);
+//setInterval(acaoDoNossoBot, 100000);
