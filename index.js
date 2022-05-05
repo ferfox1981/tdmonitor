@@ -50,9 +50,9 @@ async function acaoDoNossoBot() {
 // ...
 
 // Schedule tasks to be run on the server.
-cron.schedule('0 10-17 * * 1-5', function() {
+//cron.schedule('0 10-17 * * 1-5', function() {
    acaoDoNossoBot();
- });
+ //});
 
 // 10 segundos
 //setInterval(acaoDoNossoBot, 100000);
