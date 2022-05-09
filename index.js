@@ -25,10 +25,9 @@ async function acaoDoNossoBot() {
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
-                   "📉 IPCA+2045: "+ taxas.ipca2045+"\n"+
-                   Math.random();
+                   "📉 IPCA+2045: "+ taxas.ipca2045;
 
-      console.log('tick: '+new Date().toString())
+      console.log('ticks: '+new Date().toString())
       if(taxas.statusMercado == 'Aberto') {              
                    
          nossoBot.post(
