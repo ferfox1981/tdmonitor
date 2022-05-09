@@ -17,6 +17,8 @@ module.exports = async function getTaxas() {
         })
 
         )
+        let mercado = x.data.response['TrsrBondMkt']
+        const status = mercado['sts']
         let restrito2026 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB4W2')
         let restrito2035 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB3E2')
         let restrito2045 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB2U0')
@@ -27,7 +29,8 @@ module.exports = async function getTaxas() {
 
         
         let taxa = 
-            {ipca2026:restrito2026[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
+            {statusMercado: status,
+             ipca2026:restrito2026[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
              ipca2035:restrito2035[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
              ipca2045:restrito2045[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
              ipca2025Pre:restritoprefix2025[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),

@@ -14,7 +14,7 @@ const nossoBot = new Twit({
 
 
 async function acaoDoNossoBot() {
-    //console.log( await taxa())
+  
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
@@ -27,18 +27,22 @@ async function acaoDoNossoBot() {
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
                    "📉 IPCA+2045: "+ taxas.ipca2045+"\n"+
                    Math.random();
-                 //  replace(/,/g, '.')
-   nossoBot.post(
-      'statuses/update',
-      {status: postTweet},
-      function (err, data, response) {
-         if (err) {
-            console.log("ERRO:" + err);
-            return false;
-         }
-         console.log("Tweet postado com sucesso!\n");
-      }
-   )
+
+      console.log('tick: '+new Date().toString())
+      if(taxas.statusMercado == 'Aberto') {              
+                   
+         nossoBot.post(
+            'statuses/update',
+            {status: postTweet},
+            function (err, data, response) {
+               if (err) {
+                  console.log("ERRO:" + err);
+                  return false;
+               }
+               console.log("Tweet postado com sucesso!\n");
+            }
+         )
+      }   
 }
 // ...
 
