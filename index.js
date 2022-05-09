@@ -28,7 +28,7 @@ async function acaoDoNossoBot() {
                    "📉 IPCA+2045: "+ taxas.ipca2045;
 
       console.log('ticks: '+new Date().toString())
-      if(taxas.statusMercado == 'Aberto') {              
+      if(taxas.statusMercado !== 'Fechado') {              
                    
          nossoBot.post(
             'statuses/update',
