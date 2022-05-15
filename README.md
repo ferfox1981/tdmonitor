@@ -16,5 +16,13 @@ Insert key:
 Check all keys:
 `KEYS *`
 
+GET key
+`GET keyname`
+
 Leave Redis:
 `quit`
+
+
+#### Redis
+Redis Datatype Tutorial
+https://redis.io/docs/manual/data-types/data-types-tutorial/
