@@ -28,7 +28,7 @@ const client = redis.createClient({url: process.env.REDIS_URL});
 
 async function acaoDoNossoBot() {
   
-   
+   await client.connect();
    client.get('jsondata', (err, reply) => {
       if (err) throw err;
       console.log(reply);
