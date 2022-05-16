@@ -1,6 +1,6 @@
 var Twit = require("twit");
 const taxa = require('./monitor.js')
-const cron = require('node-cron');
+
 
 require("dotenv").config();
 
@@ -12,9 +12,23 @@ const nossoBot = new Twit({
    timeout_ms: 60 * 1000
 });
 
+var redisURL = url.parse(process.env.REDISCLOUD_URL);
+var client = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
+client.auth(redisURL.auth.split(":")[1]);
+
 
 async function acaoDoNossoBot() {
   
+   let a;
+   client.get("jsondata", function (err, reply) {
+      if (reply != null) {
+        a = reply;
+      } else {
+        a = "Error";
+      }
+    });
+
+
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
@@ -27,7 +41,7 @@ async function acaoDoNossoBot() {
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
                    "📉 IPCA+2045: "+ taxas.ipca2045;
 
-      console.log('ticks oks: '+new Date().toString())
+      console.log('ticks redis: '+a+" "+new Date().toString())
       if(taxas.statusMercado !== 'Fechado' && taxas.statusMercado !== 'Em manutenção') {              
                    
          nossoBot.post(
@@ -45,10 +59,4 @@ async function acaoDoNossoBot() {
 }
 // ...
 
-// Schedule tasks to be run on the server.
-//cron.schedule('0 10-17 * * 1-5', function() {
    acaoDoNossoBot();
- //});
-
-// 10 segundos
-//setInterval(acaoDoNossoBot, 100000);
