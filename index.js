@@ -18,14 +18,16 @@ const client = redis.createClient({
    port: '13710',
    password: process.env.REDIS_PW,
 });
-
+client.on('error', err => {
+   console.log('Error ' + err);
+});
 
 //const client = redis.createClient({url: process.env.REDIS_URL});
 
 async function acaoDoNossoBot() {
    console.log('zzzzz');
   let a
-   await client.connect();
+   //await client.connect();
    await client.get('jsondata', (err, reply) => {
       if (err) throw err;
       console.log('AAAAAAAAHHHHHHHHHHHH',reply);
