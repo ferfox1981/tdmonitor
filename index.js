@@ -31,7 +31,7 @@ async function acaoDoNossoBot() {
    await client.connect();
    client.get('jsondata', (err, reply) => {
       if (err) throw err;
-      a = reply;
+      console.log('AAAAAAAAHHHHHHHHHHHH',reply);
   });
 
 
