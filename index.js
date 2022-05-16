@@ -1,6 +1,6 @@
    var Twit = require("twit");
 const taxa = require('./monitor.js')
-var url = require('url');
+
 var redis = require('redis');
 
 require("dotenv").config();
@@ -13,9 +13,11 @@ const nossoBot = new Twit({
    timeout_ms: 60 * 1000
 });
 
-var redisURL = url.parse(process.env.REDIS_URL);
-var client = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
-client.auth(redisURL.auth.split(":")[1]);
+const client = redis.createClient({
+   host: process.env.REDIS_HOST,
+   port: process.env.REDIS_PORT,
+   password: process.env.REDIS_PW
+});
 
 
 async function acaoDoNossoBot() {
