@@ -12,10 +12,10 @@ const nossoBot = new Twit({
    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
    timeout_ms: 60 * 1000
 });
-/*
+
 const client = redis.createClient({
    host: process.env.REDIS_HOST,
-   port: 13710,
+   port: '13710',
    password: process.env.REDIS_PW,
    socket: {
       tls: true,
@@ -23,10 +23,11 @@ const client = redis.createClient({
     }
 });
 
-*/
-const client = redis.createClient({url: process.env.REDIS_URL});
+
+//const client = redis.createClient({url: process.env.REDIS_URL});
 
 async function acaoDoNossoBot() {
+   console.log('zzzzz');
   let a
    await client.connect();
    await client.get('jsondata', (err, reply) => {
