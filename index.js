@@ -18,11 +18,14 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('zzzzz');
-   const client = redis.createClient({
-      host: process.env.REDIS_HOST,
+   const client = redis.createClient(
+   /*   {
+      host: REDIS_URL.REDIS_HOST,
       port: '13710',
       password: process.env.REDIS_PW,
-   });
+   }*/
+   process.env.REDIS_URL
+   );
    await client.connect();
   let a
    
