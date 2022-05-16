@@ -1,4 +1,4 @@
-var Twit = require("twit");
+   var Twit = require("twit");
 const taxa = require('./monitor.js')
 var url = require('url');
 var redis = require('redis');
@@ -13,7 +13,7 @@ const nossoBot = new Twit({
    timeout_ms: 60 * 1000
 });
 
-var redisURL = url.parse(process.env.REDISCLOUD_URL);
+var redisURL = url.parse(process.env.REDIS_URL);
 var client = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
 client.auth(redisURL.auth.split(":")[1]);
 
