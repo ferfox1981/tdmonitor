@@ -22,14 +22,11 @@ const client = redis.createClient({
 
 async function acaoDoNossoBot() {
   
-   let a;
-   client.get("jsondata", function (err, reply) {
-      if (reply != null) {
-        a = reply;
-      } else {
-        a = "Error";
-      }
-    });
+   
+   client.get('jsondata', (err, reply) => {
+      if (err) throw err;
+      console.log(reply);
+  });
 
 
 // Cuidado ao postar tweets repetidos
