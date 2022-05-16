@@ -29,10 +29,10 @@ const client = redis.createClient({url: process.env.REDIS_URL});
 async function acaoDoNossoBot() {
   let a
    await client.connect();
-   client.get('jsondata', (err, reply) => {
+   await client.get('jsondata', (err, reply) => {
       if (err) throw err;
       console.log('AAAAAAAAHHHHHHHHHHHH',reply);
-  
+  });
 
 
 // Cuidado ao postar tweets repetidos
@@ -62,8 +62,6 @@ async function acaoDoNossoBot() {
             }
          )
       }   
-
-   });
 }
 // ...
 
