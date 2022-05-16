@@ -12,7 +12,7 @@ const nossoBot = new Twit({
    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
    timeout_ms: 60 * 1000
 });
-
+/*
 const client = redis.createClient({
    host: process.env.REDIS_HOST,
    port: 13710,
@@ -23,6 +23,8 @@ const client = redis.createClient({
     }
 });
 
+*/
+const client = redis.createClient({url: process.env.REDIS_URL});
 
 async function acaoDoNossoBot() {
   
