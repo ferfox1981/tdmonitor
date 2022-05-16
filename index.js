@@ -1,6 +1,7 @@
 var Twit = require("twit");
 const taxa = require('./monitor.js')
-
+var url = require('url');
+var redis = require('redis');
 
 require("dotenv").config();
 
