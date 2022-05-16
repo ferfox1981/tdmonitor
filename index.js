@@ -32,7 +32,7 @@ async function acaoDoNossoBot() {
    client.get('jsondata', (err, reply) => {
       if (err) throw err;
       console.log('AAAAAAAAHHHHHHHHHHHH',reply);
-  });
+  
 
 
 // Cuidado ao postar tweets repetidos
@@ -62,6 +62,8 @@ async function acaoDoNossoBot() {
             }
          )
       }   
+
+   });
 }
 // ...
 
