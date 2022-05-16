@@ -24,7 +24,7 @@ async function acaoDoNossoBot() {
       port: '13710',
       password: process.env.REDIS_PW,
    }*/
-   process.env.REDIS_URL
+   {url: process.env.REDIS_URL}
    );
    await client.connect();
   let a
