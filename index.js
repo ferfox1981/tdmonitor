@@ -15,8 +15,12 @@ const nossoBot = new Twit({
 
 const client = redis.createClient({
    host: process.env.REDIS_HOST,
-   port: process.env.REDIS_PORT,
-   password: process.env.REDIS_PW
+   port: 13710,
+   password: process.env.REDIS_PW,
+   socket: {
+      tls: true,
+      rejectUnauthorized: false
+    }
 });
 
 
