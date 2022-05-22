@@ -41,12 +41,12 @@ const options = {
 
 async function acaoDoNossoBot() {
    console.log('zzzzz');
-   
+  /* 
    const client = redis.createClient(
    process.env.REDIS_URL,   
    options
    );
-  // await client.connect();
+  
 
   let a
    
@@ -54,7 +54,18 @@ async function acaoDoNossoBot() {
       if (err) throw err;
       console.log('AAAAAAAAHHHHHHHHHHHH',reply);
   });
+*/
 
+(async () => {
+   const client = createClient(process.env.REDIS_URL);
+ 
+   client.on('error', (err) => console.log('Redis Client Error', err));
+ 
+   await client.connect();
+ 
+   await client.set('key', 'PAPAPAPAAP');
+   const value = await client.get('key');
+ })();
 
 // Cuidado ao postar tweets repetidos
 // increase 📈
