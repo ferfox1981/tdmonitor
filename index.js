@@ -8,7 +8,7 @@ require("dotenv").config();
 if(!process.env.REDIS_URL)
    console.log('URL Redis Inválida')
 else
-console.log('Nothing to worry here')
+   console.log('URL Redis válida')
 
 const nossoBot = new Twit({
    consumer_key: process.env.CONSUMER_KEY,
@@ -23,9 +23,13 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('zzzzz');
-   /*
+   
    const client = redis.createClient(
-   {url: process.env.REDIS_URL}
+   process.env.REDIS_URL,   
+   {tls: {
+      rejectUnauthorized: false
+         }
+   }
    );
    await client.connect();
 
@@ -35,7 +39,7 @@ async function acaoDoNossoBot() {
       if (err) throw err;
       console.log('AAAAAAAAHHHHHHHHHHHH',reply);
   });
-*/
+
 
 // Cuidado ao postar tweets repetidos
 // increase 📈
