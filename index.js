@@ -7,6 +7,8 @@ require("dotenv").config();
 
 if(!process.env.REDIS_URL)
    console.log('URL Redis Inválida')
+else
+console.log('Nothing to worry here')
 
 const nossoBot = new Twit({
    consumer_key: process.env.CONSUMER_KEY,
