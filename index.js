@@ -19,7 +19,7 @@ const nossoBot = new Twit({
 });
 
 const options = {
-   url: REDIS_URL,
+   url: process.env.REDIS_URL,
    enable_offline_queue: true,
    no_ready_check: true,
    retry_strategy: (options) => {
