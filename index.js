@@ -57,7 +57,7 @@ async function acaoDoNossoBot() {
 */
 
 (async () => {
-   const client = redis.createClient(process.env.REDIS_URL);
+   const client = redis.createClient(process.env.REDIS_URL, options);
  
    client.on('error', (err) => console.log('Redis Client Error', err));
  
