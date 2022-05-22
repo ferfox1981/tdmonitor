@@ -1,9 +1,12 @@
-   var Twit = require("twit");
+var Twit = require("twit");
 const taxa = require('./monitor.js')
 
 var redis = require('redis');
 
 require("dotenv").config();
+
+if(!process.env.REDIS_URL)
+   console.log('URL Redis Inválida')
 
 const nossoBot = new Twit({
    consumer_key: process.env.CONSUMER_KEY,
