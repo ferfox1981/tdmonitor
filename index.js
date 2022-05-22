@@ -18,6 +18,24 @@ const nossoBot = new Twit({
    timeout_ms: 60 * 1000
 });
 
+const options = {
+   url: REDIS_URL,
+   enable_offline_queue: true,
+   no_ready_check: true,
+   retry_strategy: (options) => {
+     if (options.error && options.error.code === 'ECONNREFUSED') {
+       return new Error('The server refused the connection');
+     }
+     if (options.total_retry_time > 1000 * 60 * 60) {
+       return new Error('Retry time exhausted');
+     }
+     if (options.attempt > 10) {
+       return undefined;
+     }
+     // reconnect after
+     return Math.min(options.attempt * 100, 3000);
+   }
+ };
 
 //const client = redis.createClient({url: process.env.REDIS_URL});
 
@@ -26,10 +44,7 @@ async function acaoDoNossoBot() {
    
    const client = redis.createClient(
    process.env.REDIS_URL,   
-   {tls: {
-      rejectUnauthorized: false
-         }
-   }
+   options
    );
    await client.connect();
 
