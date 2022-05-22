@@ -46,7 +46,7 @@ async function acaoDoNossoBot() {
    process.env.REDIS_URL,   
    options
    );
-   await client.connect();
+  // await client.connect();
 
   let a
    
