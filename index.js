@@ -54,7 +54,7 @@ async function acaoDoNossoBot() {
       if (err) throw err;
       console.log('AAAAAAAAHHHHHHHHHHHH',reply);
   });
-*/
+
 
 (async () => {
    const client = redis.createClient(process.env.REDIS_URL, options);
@@ -66,7 +66,7 @@ async function acaoDoNossoBot() {
    await client.set('key', 'PAPAPAPAAP');
    const value = await client.get('key');
  })();
-
+*/
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
@@ -79,7 +79,7 @@ async function acaoDoNossoBot() {
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
                    "📉 IPCA+2045: "+ taxas.ipca2045;
 
-      console.log('ticks redis: '+new Date().toString())
+      console.log('ticks ainda redis: '+new Date().toString())
       if(taxas.statusMercado !== 'Fechado' && taxas.statusMercado !== 'Em manutenção') {              
                    
          nossoBot.post(
