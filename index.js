@@ -17,7 +17,7 @@ const nossoBot = new Twit({
 
 
 async function acaoDoNossoBot() {
-   console.log('zzzzz');
+   console.log('aaaaa');
 
 
 // Cuidado ao postar tweets repetidos
@@ -26,7 +26,7 @@ async function acaoDoNossoBot() {
 
    let taxas = await taxa();
 
-   var postTweet = "📉 xPREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
+   var postTweet = "📉 ccPREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
