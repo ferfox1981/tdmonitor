@@ -41,7 +41,7 @@ const options = {
 
 async function acaoDoNossoBot() {
    console.log('zzzzz');
-  /* 
+  
    const client = redis.createClient(
    process.env.REDIS_URL,   
    options
@@ -54,7 +54,7 @@ async function acaoDoNossoBot() {
       if (err) throw err;
       console.log('AAAAAAAAHHHHHHHHHHHH',reply);
   });
-
+/*
 
 (async () => {
    const client = redis.createClient(process.env.REDIS_URL, options);
