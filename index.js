@@ -1,11 +1,19 @@
 var Twit = require("twit");
 const taxa = require('./monitor.js')
-
+var firebase = require('firebase')
 
 
 require("dotenv").config();
 
-
+var firebaseConfig = {
+   apiKey: "AIzaSyDAiOXfQSoe3B0yNiEO4qiMLqRgLpeM9mY",
+   authDomain: "",
+   databaseURL: "https://react-my-burguer-ab0fe.firebaseio.com/",
+   projectId: "react-my-burguer-ab0fe",
+   storageBucket: "",
+   messagingSenderId: "",
+   appId: ""
+ }
 
 const nossoBot = new Twit({
    consumer_key: process.env.CONSUMER_KEY,
@@ -18,7 +26,16 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('aaaaa');
-
+   firebase.initializeApp(firebaseConfig)
+   let database = firebase.database()
+   try{
+      var ref = database.ref("/orders/");
+      ref.on("value", function (snapshot) {
+        console.log(snapshot.val());
+      });
+   }catch (err) {
+    console.log(err);
+  }
 
 // Cuidado ao postar tweets repetidos
 // increase 📈
