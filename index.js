@@ -1,7 +1,6 @@
 var Twit = require("twit");
 const taxa = require('./monitor.js')
-import { initializeApp } from 'firebase/app';
-import { getDatabase } from "firebase/database";
+var firebase = require("firebase")
 
 
 require("dotenv").config();
@@ -27,17 +26,13 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('aaaaa');
-   const app = initializeApp(firebaseConfig);
-   const database = getDatabase(app);
-   try {
-
-      var ref = database.ref("/orders/");
-      ref.on("value", function (snapshot) {
-        console.log(snapshot.val());
-      });
-    } catch (err) {
-      console.log(err);
-    }
+   firebase.initializeApp(firebaseConfig);
+   firebase.database().ref("orders").on("value", data => {
+      console.log(data.val());
+    }, errorObject => {
+      console.log(errorObject.code);
+    });
+    
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
