@@ -17,7 +17,7 @@ const nossoBot = new Twit({
 
 
 async function acaoDoNossoBot() {
-   console.log('aaaaa');
+   console.log('bbbb');
 /*
    const redis = new Redis({
       port: process.env.REDIS_PORT,
