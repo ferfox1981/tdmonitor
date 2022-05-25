@@ -18,15 +18,7 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('bbbb');
-/*
-   const redis = new Redis({
-      port: process.env.REDIS_PORT,
-      host: process.env.REDIS_HOST,
-      username: "", // needs Redis >= 6
-      password: process.env.REDIS_PW,
-      db: 0, // Defaults to 0
-    });
-*/
+
 const redis = new Redis(process.env.REDIS_URL, {
    tls: {
      rejectUnauthorized: false
