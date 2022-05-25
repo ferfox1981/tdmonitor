@@ -18,7 +18,7 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('aaaaa');
-
+/*
    const redis = new Redis({
       port: process.env.REDIS_PORT,
       host: process.env.REDIS_HOST,
@@ -26,7 +26,12 @@ async function acaoDoNossoBot() {
       password: process.env.REDIS_PW,
       db: 0, // Defaults to 0
     });
-
+*/
+const redis = new Redis(process.env.REDIS_URL, {
+   tls: {
+     rejectUnauthorized: false
+   }
+ });
    redis.get("jsondata", (err, result) => {
       if (err) {
         console.error(err);
