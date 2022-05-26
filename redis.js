@@ -12,7 +12,7 @@ const redis = new Redis(process.env.REDIS_URL, {
         if (err) {
           console.error(err);
         } else {
-          console.log('JJ',result); // Prints "value"
+          console.log('JJ',result); 
           return result
         }
       }); 

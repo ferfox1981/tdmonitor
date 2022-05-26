@@ -19,7 +19,8 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('bbbb');
-   redisConn.reqjson();
+   let a = redisConn.reqjson('jsondata');
+   console('veio',a)
 /*
 const redis = new Redis(process.env.REDIS_URL, {
    tls: {
