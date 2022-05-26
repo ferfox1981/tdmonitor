@@ -31,9 +31,9 @@ async function acaoDoNossoBot() {
 
    let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
    
-   console.log('veio dps',veio)
-   util.comparaDiferenca(dadosAntigos,taxas)
    
+   util.comparaDiferenca(dadosAntigos,taxas)
+
    var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
