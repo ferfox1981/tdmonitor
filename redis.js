@@ -7,8 +7,8 @@ const redis = new Redis(process.env.REDIS_URL, {
     }
   });
 
-  exports.reqjson = function (key){
-    redis.get(key, (err, result) => {
+  exports.reqjson = async function (key){
+    return redis.get(key, (err, result) => {
         if (err) {
           console.error(err);
         } else {
