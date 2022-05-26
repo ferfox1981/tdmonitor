@@ -30,7 +30,7 @@ async function acaoDoNossoBot() {
 // decrease 📉
 
    let taxas = await taxa();
-   let salvo = await redisConn.savejson('taxas',JSONN.stringfy(taxas));
+   let salvo = await redisConn.savejson('taxas',JSON.stringfy(taxas));
    let veio = await redisConn.reqjson('taxas');
    console.log('veio dps',veio)
    var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
