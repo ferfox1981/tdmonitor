@@ -18,20 +18,18 @@ const nossoBot = new Twit({
 
 
 async function acaoDoNossoBot() {
-   console.log('bbbb');
-   let a = await redisConn.reqjson('taxas');
-   console.log('veio',a)
-//   let b = await redisConn.savejson('treze', 'confirma')
-//   console.log(b)
-
 
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
-
+   // informacao de taxas antiga
+   let dadosAntigos = JSON.parse(await redisConn.reqjson('taxas'));
+   console.log('dadosAntigos',dadosAntigos)
+   // recuperar informacao
    let taxas = await taxa();
-   let salvo = await redisConn.savejson('taxas', JSON.stringify(taxas));
-   let veio = await redisConn.reqjson('taxas');
+
+   let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
+   
    console.log('veio dps',veio)
    var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
