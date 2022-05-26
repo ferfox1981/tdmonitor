@@ -21,6 +21,8 @@ async function acaoDoNossoBot() {
    console.log('bbbb');
    let a = await redisConn.reqjson('jsondata');
    console.log('veio',a)
+   let b = await redisConn.savejson('treze', 'confirma')
+   console.log(b)
 /*
 const redis = new Redis(process.env.REDIS_URL, {
    tls: {

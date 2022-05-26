@@ -12,8 +12,17 @@ const redis = new Redis(process.env.REDIS_URL, {
         if (err) {
           console.error(err);
         } else {
-          console.log('JJ',result); 
           return result
         }
       }); 
   }
+
+  exports.savejson = async function (key, value){      
+    return redis.set(key, value, (err, result) => {
+        if (err) {
+          console.error(err);
+        } else {
+          return result
+        }
+      }); 
+  }  
