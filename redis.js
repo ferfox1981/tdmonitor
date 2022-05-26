@@ -7,8 +7,8 @@ const redis = new Redis(process.env.REDIS_URL, {
     }
   });
 
-  exports.reqjson = function (){
-    redis.get("jsondata", (err, result) => {
+  exports.reqjson = function (key){
+    redis.get(key, (err, result) => {
         if (err) {
           console.error(err);
         } else {
