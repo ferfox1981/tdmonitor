@@ -19,31 +19,20 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('bbbb');
-   let a = await redisConn.reqjson('treze');
+   let a = await redisConn.reqjson('taxas');
    console.log('veio',a)
 //   let b = await redisConn.savejson('treze', 'confirma')
 //   console.log(b)
-/*
-const redis = new Redis(process.env.REDIS_URL, {
-   tls: {
-     rejectUnauthorized: false
-   }
- });
-   redis.get("jsondata", (err, result) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log(result); // Prints "value"
-      }
-    });   
-    */
+
 
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
 
    let taxas = await taxa();
-
+   let salvo = await redisConn.savejson('taxas',JSONN.stringfy(taxas));
+   let veio = await redisConn.reqjson('taxas');
+   console.log('veio dps',veio)
    var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
