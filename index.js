@@ -1,6 +1,7 @@
 var Twit = require("twit");
 const taxa = require('./monitor.js')
 const Redis = require("ioredis");
+const redisConn = require('./redis')
 
 
 require("dotenv").config();
@@ -18,7 +19,8 @@ const nossoBot = new Twit({
 
 async function acaoDoNossoBot() {
    console.log('bbbb');
-
+   redisConn.reqjson();
+/*
 const redis = new Redis(process.env.REDIS_URL, {
    tls: {
      rejectUnauthorized: false
@@ -31,6 +33,8 @@ const redis = new Redis(process.env.REDIS_URL, {
         console.log(result); // Prints "value"
       }
     });   
+    */
+
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
