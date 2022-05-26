@@ -2,6 +2,7 @@ var Twit = require("twit");
 const taxa = require('./monitor.js')
 const Redis = require("ioredis");
 const redisConn = require('./redis')
+const util = require('./util.js')
 
 
 require("dotenv").config();
@@ -31,6 +32,8 @@ async function acaoDoNossoBot() {
    let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
    
    console.log('veio dps',veio)
+   util.comparaDiferenca(dadosAntigos,taxas)
+   
    var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
