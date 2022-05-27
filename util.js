@@ -2,8 +2,11 @@ _ = require("lodash")
 
 
 exports.comparaDiferenca = function (antigo, novo){
-    if(_.isEqual(antigo,novo))
-        console.log('sao iguais')
+    if (antigo && novo)
+        if(_.isEqual(antigo,novo))
+            return true;
+        else
+            return false;
     else
-        console.log('sao diferentes')
+        return false;
 }
