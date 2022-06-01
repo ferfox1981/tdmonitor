@@ -32,10 +32,8 @@ async function acaoDoNossoBot() {
    let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
    
    
-   if(util.comparaDiferenca(dadosAntigos,taxas))
-      console.log('iguais')
-   else
-      console.log('diferentes')
+   const iguais = util.comparaDiferenca(dadosAntigos,taxas)
+
       
    var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
@@ -43,8 +41,8 @@ async function acaoDoNossoBot() {
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
                    "📉 IPCA+2045: "+ taxas.ipca2045;
 
-      console.log('ticks ainda redis: '+new Date().toString())
-      if(taxas.statusMercado !== 'Fechado' && taxas.statusMercado !== 'Em manutenção') {              
+      console.log('ticks dados novos: '+new Date().toString()+taxas)
+      if(taxas.statusMercado !== 'Fechado' && taxas.statusMercado !== 'Em manutenção' && !iguais) {              
                    
          nossoBot.post(
             'statuses/update',
