@@ -24,6 +24,7 @@ module.exports = async function getTaxas() {
         let restrito2045 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB2U0')
         let restritoprefix2025 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN7N2')
         let restritoprefix2029 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN806')
+        let restritoIpcaJuros2032 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB674')
         
          
 
@@ -35,6 +36,7 @@ module.exports = async function getTaxas() {
              ipca2045:restrito2045[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
              ipca2025Pre:restritoprefix2025[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
              ipca2029Pre:restritoprefix2029[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
+             ipca2032JurosSem:restritoIpcaJuros2032[0]['dado']['anulInvstmtRate'].toString().replace(".", ","),
             };        
         return taxa;
     });
