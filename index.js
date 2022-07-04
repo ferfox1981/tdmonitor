@@ -29,7 +29,7 @@ async function acaoDoNossoBot() {
    // recuperar informacao
    let taxas = await taxa();
 
-   //let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
+   let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
    
    
    //const iguais = util.comparaDiferenca(dadosAntigos,taxas)
