@@ -25,7 +25,7 @@ async function acaoDoNossoBot() {
 // decrease 📉
    // informacao de taxas antiga
    let dadosAntigos = JSON.parse(await redisConn.reqjson('taxas'));
-   console.log('dadosAntigos',dadosAntigos)
+   console.log('dadosAntigosw',dadosAntigos)
    // recuperar informacao
    let taxas = await taxa();
 
@@ -39,9 +39,10 @@ async function acaoDoNossoBot() {
                    "📉 PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "📉 IPCA+2026: "+ taxas.ipca2026+"\n"+
                    "📉 IPCA+2035: "+ taxas.ipca2035+"\n"+
-                   "📉 IPCA+2045: "+ taxas.ipca2045;
+                   "📉 IPCA+2045: "+ taxas.ipca2045+"\n"+
+                   "📉 IPCA+JurosSem2032: "+taxas.ipca2032JurosSem;
 
-      console.log('ticks dados novos: '+new Date().toString()+taxas)
+      console.log('ticks dados novos: '+new Date().toString())
       if(taxas.statusMercado !== 'Fechado' && taxas.statusMercado !== 'Em manutenção') {              
                    
          nossoBot.post(
