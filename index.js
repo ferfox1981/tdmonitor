@@ -25,7 +25,7 @@ async function acaoDoNossoBot() {
 // decrease 📉
    // informacao de taxas antiga
    //let dadosAntigos = JSON.parse(await redisConn.reqjson('taxas'));
-   console.log('dadosAntigosw',dadosAntigos)
+   //console.log('dadosAntigosw',dadosAntigos)
    // recuperar informacao
    let taxas = await taxa();
 
