@@ -24,12 +24,12 @@ async function acaoDoNossoBot() {
 // increase 📈
 // decrease 📉
    // informacao de taxas antiga
-   let dadosAntigos = JSON.parse(await redisConn.reqjson('taxas'));
+   //let dadosAntigos = JSON.parse(await redisConn.reqjson('taxas'));
    console.log('dadosAntigosw',dadosAntigos)
    // recuperar informacao
    let taxas = await taxa();
 
-   let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
+   //let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
    
    
    //const iguais = util.comparaDiferenca(dadosAntigos,taxas)
