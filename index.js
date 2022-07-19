@@ -1,7 +1,7 @@
 var Twit = require("twit");
 const taxa = require('./monitor.js')
-const Redis = require("ioredis");
-const redisConn = require('./redis')
+//const Redis = require("ioredis");
+//const redisConn = require('./redis')
 const util = require('./util.js')
 
 
