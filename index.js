@@ -19,7 +19,7 @@ const nossoBot = new Twit({
 
 
 async function acaoDoNossoBot() {
-   console.log(firebase.reqDiario)
+   //console.log(firebase.reqDiario)
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
