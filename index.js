@@ -1,7 +1,7 @@
 var Twit = require("twit");
 const taxa = require('./monitor.js')
 //const Redis = require("ioredis");
-//const redisConn = require('./redis')
+const firebase = require('./firebase')
 const util = require('./util.js')
 
 
@@ -19,7 +19,7 @@ const nossoBot = new Twit({
 
 
 async function acaoDoNossoBot() {
-
+   console.log(firebase.reqDiario)
 // Cuidado ao postar tweets repetidos
 // increase 📈
 // decrease 📉
