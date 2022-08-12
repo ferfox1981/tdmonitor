@@ -29,7 +29,7 @@ async function acaoDoNossoBot() {
    let taxas = await taxa();
 
    let isOk = await firebase.setElement(taxas);
-   console.log('updatetime***',isOk.updateTime);
+   console.log('updatetime***',isOk);
    
    
    //const iguais = util.comparaDiferenca(dadosAntigos,taxas)
