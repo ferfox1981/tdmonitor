@@ -11,7 +11,7 @@ antigo =  {
 
 novo =  {
     statusMercado: 'Fechado',
-    ipca2026: '5,56',
+    ipca2026: '5,55',
     ipca2035: '10',
     ipca2045: '4',
     ipca2025Pre: '12,63',

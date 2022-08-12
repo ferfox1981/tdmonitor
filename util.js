@@ -14,16 +14,17 @@ exports.comparaDiferenca = function (antigo, novo){
 
 exports.gerarDiferencaPercentual = function (vlAntigo, vlNovo){
     
-    if(vlAntigo && vlNovo)
-    return (((+vlNovo.replace(",", ".")/vlAntigo.replace(",", ".")) - 1) * 100).toFixed(2);
+    if(vlAntigo && vlNovo) {
+        const diff = (((+vlNovo.replace(",", ".")/vlAntigo.replace(",", ".")) - 1) * 100).toFixed(2);
+        return diff === '0.00' ? '(=)' : '('+ diff.toString().replace(".", ",") +')';
+    } else 
+        return '(N/A)'
 }
 
 exports.atualizarPercentual = function (antigo, novo){
 
     if(antigo.ipca2026 && novo.ipca2026){
         difIpca2026 = gerarDiferencaPercentual(antigo.ipca2026,novo.ipca2026);
-    } else {
-        
-    }
+    } 
 
 }
