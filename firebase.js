@@ -27,5 +27,5 @@ exports.getElement =  async function getElement() {
 }
 
 exports.setElement = async function newSet(elem){
-    await db.collection('diario').doc('20220811').set(elem);
+    await db.collection('diario').doc('hora').set(elem);
 }
