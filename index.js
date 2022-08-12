@@ -56,7 +56,7 @@ async function acaoDoNossoBot() {
             }
          )
       }  
-      console.log('tik tak ZZZZZZ?') 
+      console.log('Golo') 
 }
 // ...
 
