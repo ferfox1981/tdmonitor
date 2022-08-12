@@ -20,7 +20,7 @@ exports.gerarDiferencaPercentual = function (vlAntigo, vlNovo){
     } else 
         return '(N/A)'
 } 
-
+ 
 exports.atualizarPercentual = function (antigo, novo){
 
     if(antigo.ipca2026 && novo.ipca2026){
