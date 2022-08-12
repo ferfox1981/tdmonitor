@@ -25,7 +25,7 @@ async function acaoDoNossoBot() {
    let dadosAntigos = await firebase.getElement();
    console.log('dadosAntigosw',dadosAntigos)
    // recuperar informacao
-   //await firebase.getElement();
+   //await firebase.getElement(); 
    let taxas = await taxa();
 
    let isOk = await firebase.setElement(taxas);
