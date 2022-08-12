@@ -19,11 +19,11 @@ module.exports = async function getTaxas() {
         )
         let mercado = x.data.response['TrsrBondMkt']
         const status = mercado['sts']
-        let restrito2026 = getIndice('BRSTNCNTB4W2')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB4W2')
-        let restrito2035 = getIndice('BRSTNCNTB3E2')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB3E2')
-        let restrito2045 = getIndice('BRSTNCNTB2U0')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB2U0')
-        let restritoprefix2025 = getIndice('BRSTNCLTN7N2') //retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN7N2')
-        let restritoprefix2029 = getIndice('BRSTNCLTN806')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN806')
+        let restrito2026 = getIndice(retorno, 'BRSTNCNTB4W2')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB4W2')
+        let restrito2035 = getIndice(retorno, 'BRSTNCNTB3E2')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB3E2')
+        let restrito2045 = getIndice(retorno,'BRSTNCNTB2U0')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB2U0')
+        let restritoprefix2025 = getIndice(retorno,'BRSTNCLTN7N2') //retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN7N2')
+        let restritoprefix2029 = getIndice(retorno,'BRSTNCLTN806')//retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCLTN806')
         //let restritoIpcaJuros2032 = retorno.filter(x => x['dado']['isinCd'] === 'BRSTNCNTB674')
         
          
@@ -43,7 +43,7 @@ module.exports = async function getTaxas() {
     
 }
 
-function getIndice(indice){
+function getIndice(retorno, indice){
     try {
     return retorno.filter(x => x['dado']['isinCd'] === indice);
     }catch(e){

@@ -58,6 +58,6 @@ async function acaoDoNossoBot() {
       }  
       console.log('Golo') 
 }
-// ...
+
 
    acaoDoNossoBot();
