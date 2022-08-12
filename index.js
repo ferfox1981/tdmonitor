@@ -45,7 +45,7 @@ async function acaoDoNossoBot() {
                    "IPCA+2026: "+ taxas.ipca2026 + util.gerarDiferencaPercentual(dadosAntigos.ipca2026,taxas.ipca2026)+"\n"+
                    "IPCA+2035: "+ taxas.ipca2035 + util.gerarDiferencaPercentual(dadosAntigos.ipca2035,taxas.ipca2035)+"\n"+
                    "IPCA+2045: "+ taxas.ipca2045 + util.gerarDiferencaPercentual(dadosAntigos.ipca2045,taxas.ipca2045);
-
+ 
       console.log('tweet vai ser:',postTweet)
       if(taxas.statusMercado !== 'Fechado' && taxas.statusMercado !== 'Em manutenção') {              
                    
