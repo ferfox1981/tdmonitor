@@ -22,10 +22,10 @@ async function acaoDoNossoBot() {
 // increase 📈
 // decrease 📉
    // informacao de taxas antiga
-   //let dadosAntigos = JSON.parse(await redisConn.reqjson('taxas'));
-   //console.log('dadosAntigosw',dadosAntigos)
+   let dadosAntigos = await firebase.getElement();
+   console.log('dadosAntigosw',dadosAntigos)
    // recuperar informacao
-   await firebase.getElement();
+   //await firebase.getElement();
    let taxas = await taxa();
 
    //let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
