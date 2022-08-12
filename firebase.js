@@ -3,7 +3,7 @@ const fs = require('firebase-admin');
 // https://console.firebase.google.com/u/0/project/tdmonitor-1b233/settings/serviceaccounts/adminsdk?hl=pt
 
 const serviceAccount = {
-    type: "service_account",
+    type: "service_account", 
     project_id: "tesouro-monitor",
     private_key_id: process.env.FIREBASE_PROJECT_KEY_ID,
     private_key: process.env.FIREBASE_PRIVATE_KEY,
