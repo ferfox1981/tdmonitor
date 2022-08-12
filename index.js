@@ -25,6 +25,7 @@ async function acaoDoNossoBot() {
    //let dadosAntigos = JSON.parse(await redisConn.reqjson('taxas'));
    //console.log('dadosAntigosw',dadosAntigos)
    // recuperar informacao
+   await firebase.getElement()
    let taxas = await taxa();
 
    //let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
