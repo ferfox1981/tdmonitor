@@ -54,7 +54,8 @@ async function acaoDoNossoBot() {
                console.log("Tweet postado com sucesso!\n");
             }
          )
-      }   
+      }  
+      console.log('tik tak toe') 
 }
 // ...
 
