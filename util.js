@@ -16,7 +16,7 @@ exports.gerarDiferencaPercentual = function (vlAntigo, vlNovo){
     
     if(vlAntigo && vlNovo) {
         const diff = (((+vlNovo.replace(",", ".")/vlAntigo.replace(",", ".")) - 1) * 100).toFixed(2);
-        return diff === '0.00' ? '(=)' : '('+ diff.toString().replace(".", ",") +')';
+        return diff === '0.00' ? ' (=)' : ' ('+ diff.toString().replace(".", ",") +')';
     } else 
         return '(N/A)'
 }
