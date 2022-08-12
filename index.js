@@ -32,7 +32,11 @@ async function acaoDoNossoBot() {
    console.log('updatetime***',isOk);
    
    
-   //const iguais = util.comparaDiferenca(dadosAntigos,taxas)
+   const iguais = util.comparaDiferenca(dadosAntigos,taxas)
+   if (iguais){
+      console.log('sao iguais');
+   } else
+   console.log('sao diferentes')
 
       
    var postTweet = "📉 PREFIX-2025: "+ taxas.ipca2025Pre+"\n"+
