@@ -2,7 +2,7 @@ const fs = require('firebase-admin');
 // https://retool.com/blog/crud-with-cloud-firestore-using-the-nodejs-sdk/
 // https://console.firebase.google.com/u/0/project/tdmonitor-1b233/settings/serviceaccounts/adminsdk?hl=pt
 
-const serviceAccount = {
+const serviceAccount = { 
     "type": "service_account", 
     "project_id": "tesouro-monitor",
     "private_key_id": process.env.FIREBASE_PROJECT_KEY_ID,
