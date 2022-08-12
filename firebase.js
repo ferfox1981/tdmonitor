@@ -26,6 +26,6 @@ exports.getElement =  async function getElement() {
     return liam.data();
 }
 
-exports.setElement = async function newSet(){
-    const liam = await db.collection('diario').doc('20220811').set({xxx:'SSS'});
+exports.setElement = async function newSet(elem){
+    await db.collection('diario').doc('20220811').set(elem);
 }

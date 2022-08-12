@@ -28,7 +28,8 @@ async function acaoDoNossoBot() {
    //await firebase.getElement();
    let taxas = await taxa();
 
-   //let isOk = await redisConn.savejson('taxas', JSON.stringify(taxas));
+   let isOk = await firebase.setElement(taxas);
+   console.log('updatetime***',isOk.updateTime);
    
    
    //const iguais = util.comparaDiferenca(dadosAntigos,taxas)
