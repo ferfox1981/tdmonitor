@@ -40,7 +40,7 @@ async function acaoDoNossoBot() {
    console.log('sao diferentes')
 
       
-   var postTweet = "PREFIX-2025: "+ taxas.ipca2025Pre + util.comparaDiferenca(dadosAntigos.ipca2025Pre,taxas.ipca2025Pre)+"\n"+
+   var postTweet = "PREFIX-2025: "+ taxas.ipca2025Pre + util.gerarDiferencaPercentual(dadosAntigos.ipca2025Pre,taxas.ipca2025Pre)+"\n"+
                    "PREFIX-2029: "+ taxas.ipca2029Pre+"\n"+
                    "IPCA+2026: "+ taxas.ipca2026+"\n"+
                    "IPCA+2035: "+ taxas.ipca2035+"\n"+
