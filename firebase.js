@@ -22,8 +22,8 @@ fs.initializeApp({
 const db = fs.firestore();
 
 exports.getElement =  async function getElement() {
-    return await db.collection('diario').doc('hora').get();
-    
+    const liam = await db.collection('diario').doc('hora').get();
+    return liam.data();
 }
 
 exports.setElement = async function newSet(){
