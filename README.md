@@ -6,6 +6,10 @@ https://www.youtube.com/watch?v=fD-GRCH_tks
 Emojis:
 https://emojipedia.org/chart-decreasing/
 
+firebase
+https://retool.com/blog/crud-with-cloud-firestore-using-the-nodejs-sdk/
+
+
 
 ### Heroku commands
 `git add .`
@@ -27,10 +31,3 @@ GET key
 
 Leave Redis:
 `quit`
-
-
-#### Redis
-Redis Datatype Tutorial
-https://redis.io/docs/manual/data-types/data-types-tutorial/
-
-#### Redis + Nodejs

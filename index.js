@@ -24,20 +24,15 @@ async function acaoDoNossoBot() {
    // informacao de taxas antiga
    let dadosAntigos = await firebase.getElement();
    console.log('dadosAntigosw',dadosAntigos)
+
    // recuperar informacao
-   //await firebase.getElement(); 
    let taxas = await taxa();
 
    let isOk = await firebase.setElement(taxas);
-   console.log('updatetime***',isOk);
+
    
    
    const iguais = util.comparaDiferenca(dadosAntigos,taxas)
-   
-   if (iguais){
-      console.log('sao iguais');
-   } else
-   console.log('sao diferentes')
 
       
    var postTweet = "PREFIX-2025: "+ taxas.ipca2025Pre + util.gerarDiferencaPercentual(dadosAntigos.ipca2025Pre,taxas.ipca2025Pre)+"\n"+
@@ -61,7 +56,7 @@ async function acaoDoNossoBot() {
             }
          )
       }  
-      console.log('Golo') 
+      console.log('Tweet enviado') 
 }
 
 
