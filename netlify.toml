@@ -1,3 +1,3 @@
 [build]
   # This will be your default build command
-  command= "CI='' npm run build"    
+  command= "CI= npm run build"    
