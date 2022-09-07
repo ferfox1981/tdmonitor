@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "netlify-lambda build"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "dotenv": "^16.0.0",
     "firebase-admin": "^9.12.0",
     "lodash": "^4.17.21",
-    "twit": "^2.2.11"
+    "twit": "^2.2.11",
+    "netlify-lambda": "^1.1.0"
   }
 }
