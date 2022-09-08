@@ -1,4 +1,7 @@
-[build]
+#[build]
   # This will be your default build command
   # command= "CI= npm run build"
   # functions = "dist"
+
+[functions."test-function"]
+schedule = "* * * * *"  
