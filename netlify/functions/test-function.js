@@ -1,5 +1,5 @@
 const handler = async function(event, context) {
-    console.log("Received event:", event)
+    console.log("FODA-SE"+ new Date())
 
     return {
         statusCode: 200,

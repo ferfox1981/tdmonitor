@@ -4,4 +4,5 @@
   # functions = "dist"
 
 [functions."test-function"]
-schedule = "10 * * * *"  
+schedule = "@hourly"
+ 
