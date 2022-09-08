@@ -1,9 +1,11 @@
+const { schedule } = require('@netlify/functions')
+
 const handler = async function(event, context) {
-    console.log("FODA-SE"+ new Date())
+    console.log("FODA-SE DEMAIS"+ new Date())
 
     return {
         statusCode: 200,
     };
 };
 
-module.exports.handler = handler;
+module.exports.handler = schedule("@hourly", handler);

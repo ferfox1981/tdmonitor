@@ -3,6 +3,6 @@
   # command= "CI= npm run build"
   # functions = "dist"
 
-[functions."test-function"]
-schedule = "@hourly"
+#[functions."test-function"]
+#schedule = "@hourly"
  
