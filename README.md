@@ -31,3 +31,8 @@ GET key
 
 Leave Redis:
 `quit`
+
+Netlify:
+- Importante lembrar de ativar o Netlify Labs
+
+
