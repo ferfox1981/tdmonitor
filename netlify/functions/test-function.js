@@ -1,5 +1,5 @@
 const { schedule } = require('@netlify/functions')
-const firebase = require('../../firebase')
+//const firebase = require('../../firebase')
 
 var Twit = require("twit");
 
@@ -16,8 +16,8 @@ const nossoBot = new Twit({
 const handler = async function(event, context) {
     console.log("De hora em hora GMT entre 9:00 e 18:00 APENAS UMA VEZ ..."+ new Date())
 
-    let dadosAntigos = await firebase.getElement();
-   console.log('dadosAntigosw',dadosAntigos)
+   // let dadosAntigos = await firebase.getElement();
+   //console.log('dadosAntigosw',dadosAntigos)
 
 
 
