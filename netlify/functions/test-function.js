@@ -1,5 +1,5 @@
 const { schedule } = require('@netlify/functions')
-const firebase = require('../../firebase')
+//const firebase = require('../../firebase')
 
 var Twit = require("twit");
 
