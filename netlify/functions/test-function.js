@@ -2,7 +2,7 @@ const { schedule } = require('@netlify/functions')
 //const firebase = require('../../firebase')
 
 var Twit = require("twit");
-
+ 
 const nossoBot = new Twit({
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
