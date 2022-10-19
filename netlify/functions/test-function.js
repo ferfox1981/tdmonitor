@@ -25,5 +25,5 @@ const handler = async function(event, context) {
         statusCode: 200,
     };
 };
-module.exports.handler = schedule("0 12-21 * * 1-5", handler); 
-// o de amanha ->>module.exports.handler = schedule("0 13-22 * * 1-5", handler); 
+module.exports.handler = schedule("* * * * *", handler); 
+//module.exports.handler = schedule("0 12-21 * * 1-5", handler); 
