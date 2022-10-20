@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ferfox1981/tdmonitor#readme",
   "dependencies": {
+    "@firebase/app-compat": "^0.1.37",
     "@netlify/functions": "^1.2.0",
     "axios": "^0.27.1",
     "dotenv": "^16.0.0",
