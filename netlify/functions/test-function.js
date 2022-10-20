@@ -1,6 +1,6 @@
 const { schedule } = require('@netlify/functions')
 const firebase = require('./firebase')
-
+const taxa = require('./monitor.js')
 var Twit = require("twit");
  
 const nossoBot = new Twit({
@@ -14,11 +14,13 @@ const nossoBot = new Twit({
 
 
 const handler = async function(event, context) {
-    console.log("ZZDe hora em hora GMT entre 9:00 e 18:00 APENAS UMA VEZ ..."+ new Date())
+    console.log("De hora em hora GMT entre 9:00 e 18:00 APENAS UMA VEZ ..."+ new Date())
     
     let dadosAntigos = await firebase.getElement();
-   console.log('dadosAntigosw',dadosAntigos)
-
+    console.log('dadosAntigosw',dadosAntigos)
+       // recuperar informacao
+    let taxas = await taxa();
+    console.log('dadosNovos',taxas)
 
 
     return {
