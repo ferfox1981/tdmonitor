@@ -26,7 +26,7 @@ const handler = async function (event, context) {
 
     let isOk = await firebase.setElement(taxas);
 
-    var postTweet = "pREFIX-2025: " + taxas.ipca2025Pre + util.gerarDiferencaPercentual(dadosAntigos.ipca2025Pre, taxas.ipca2025Pre) + "\n" +
+    var postTweet = "bbbbbbbbREFIX-2025: " + taxas.ipca2025Pre + util.gerarDiferencaPercentual(dadosAntigos.ipca2025Pre, taxas.ipca2025Pre) + "\n" +
         "PREFIX-2029: " + taxas.ipca2029Pre + util.gerarDiferencaPercentual(dadosAntigos.ipca2029Pre, taxas.ipca2029Pre) + "\n" +
         "IPCA+2026: " + taxas.ipca2026 + util.gerarDiferencaPercentual(dadosAntigos.ipca2026, taxas.ipca2026) + "\n" +
         "IPCA+2035: " + taxas.ipca2035 + util.gerarDiferencaPercentual(dadosAntigos.ipca2035, taxas.ipca2035) + "\n" +
