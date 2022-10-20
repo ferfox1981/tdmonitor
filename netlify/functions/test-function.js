@@ -33,7 +33,7 @@ const handler = async function (event, context) {
         "IPCA+2045: " + taxas.ipca2045 + util.gerarDiferencaPercentual(dadosAntigos.ipca2045, taxas.ipca2045);
 
     console.log('tweet vai ser:', postTweet)
-    if (taxas.statusMercado == 'Fechado' && taxas.statusMercado !== 'Em manutenção') {
+    //if (taxas.statusMercado == 'Fechado' && taxas.statusMercado !== 'Em manutenção') {
 
         nossoBot.post(
             'statuses/update',
@@ -46,7 +46,7 @@ const handler = async function (event, context) {
                 console.log("Tweet postado com sucesso!\n");
             }
         )
-    }
+    //}
     console.log('Tweet enviado')
 
 
